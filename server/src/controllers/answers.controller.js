@@ -109,10 +109,7 @@ const upvoteAnswer = async(req, res) => {
             console.log(user)
             const isUpvoted = user.upvotedAns.includes(ans._id)
             const isDownvoted = user.downvotedAns.includes(ans._id)
-            console.log(user.upvotedAns.includes(ans._id))
-            console.log(isDownvoted)
             if(isUpvoted){
-                console.log('already')
                 return res.status(200).send({message: "already upvoted!"})
                 
             }
